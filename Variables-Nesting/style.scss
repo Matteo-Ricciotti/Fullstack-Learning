@@ -1,0 +1,29 @@
+$red: red;
+$green: green;
+$blue: blue;
+$padding: 15px;
+
+div {
+    border: 1px solid $red;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    h1 {
+        color: $green;
+        text-decoration: underline $blue;
+    }
+    section {
+        display: flex;
+        padding: $padding;
+        article {
+            border: 1px solid $green;
+            padding: $padding;
+        }
+        article:nth-child(odd) {
+            color: $blue;
+        }
+        article:nth-child(even) {
+            color: $red;
+        }
+    }
+}
