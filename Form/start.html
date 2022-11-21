@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="eng">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
+    <title>HTML Lesson</title>
+    <style>
+      label {
+        display: block;
+      }
+
+      #main {
+        position: relative;
+        left: 24%;
+        display: grid;
+        grid-template-columns: repeat(3, 250px);
+      }
+
+      #btn {
+        position: relative;
+        top: 90px;
+        left: 280px;
+        width: 100px;
+      }
+
+      #btn:hover {
+        background-color: rgb(0, 223, 0);
+        border-color: inherit;
+      }
+    </style>
+  </head>
+  <body>
+    <form id="main">
+      <section>
+        <h2>General</h2>
+
+        <!-- Name and Lastname-->
+        <label for="user_name">Name:</label>
+        <input type="text" name="user_name" />
+
+        <label for="user_lastname">Lastname:</label>
+        <input type="text" name="user_lastname" />
+
+        <!-- Date of Birth -->
+        <label for="user_bithdate">Date of Birth:</label>
+        <input type="date" name="user_bithdate" />
+      </section>
+
+      <section>
+        <h2>Account Details</h2>
+
+        <!-- Email -->
+        <label for="user_email">Email:</label>
+        <input type="email" name="user_email" />
+
+        <!-- Password -->
+        <label for="user_password">Password:</label>
+        <input type="password" name="user_password" />
+        <br />
+
+        <!-- Telephone Number -->
+        <label for="user_number">Telephone Number:</label>
+        <input type="number" name="user_number" />
+
+        <!-- Plan Selector -->
+        <label for="plan_selector">Select a Plan:</label>
+        <select name="plan_selector">
+          <option value="free">Free Plan</option>
+          <optgroup label="Levels">
+            <option value="low">2,99$/month</option>
+            <option value="medium">5,99$/month</option>
+            <option value="expensive">11,99$/month</option>
+          </optgroup>
+        </select>
+
+        <br /><br />
+
+        <label for="pro_plan"
+          >Pro Plan
+          <span>
+            <input type="checkbox" name="pro_plan" value="yes" />
+          </span>
+        </label>
+      </section>
+
+      <section>
+        <!-- Credit Card -->
+        <h2>Credit Card</h2>
+
+        <label for="credit_card_num">Credit Card Number:</label>
+        <input type="number" name="credit_card_num" />
+
+        <label for="credit_card_cvc">CVC:</label>
+        <input type="number" name="credit_card_cvc" min="100" max="999" />
+
+        <label for="expiration_date">Expiration Date</label>
+        <input type="date" name="expiration_date" />
+
+        <label for="billing_address">Billing Address</label>
+        <input type="text" name="billing_address" />
+      </section>
+
+      <input type="submit" id="btn" />
+    </form>
+
+    <br />
+    <hr width="55%" />
+  </body>
+</html>
