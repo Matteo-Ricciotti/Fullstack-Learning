@@ -1,0 +1,63 @@
+:root {
+  --calc-radius: 12px;
+}
+
+#calculator {
+  height: 250px;
+  width: 250px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+#result {
+  grid-column: span 4;
+  color: white;
+  text-align: end;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 20px;
+  padding-right: 10px;
+  background-color: rgb(50, 65, 65);
+  border-radius: var(--calc-radius) var(--calc-radius) 0 0;
+}
+
+#equal {
+  grid-row: span 4;
+  background-color: rgb(255, 110, 110);
+  text-align: center;
+  display: flex;
+  font-weight: bold;
+  font-size: 20px;
+  flex-direction: column;
+  justify-content: center;
+  border-radius: 0 0 var(--calc-radius) 0;
+}
+
+.operator {
+  display: flex;
+  font-weight: bold;
+  font-size: 20px;
+  flex-direction: column;
+  justify-content: center;
+  background-color: rgb(206, 224, 228);
+  border: 1px solid rgb(98, 135, 143);
+  text-align: center;
+}
+
+.number,
+.tool {
+  text-align: center;
+  display: flex;
+  font-weight: bold;
+  font-size: 20px;
+  flex-direction: column;
+  justify-content: center;
+  background-color: rgba(203, 224, 230, 0.5);
+  border: 1px solid rgb(98, 135, 143);
+}
+
+#zero {
+  border-radius: 0 0 0 var(--calc-radius);
+}

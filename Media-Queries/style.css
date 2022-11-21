@@ -1,0 +1,174 @@
+:root {
+  --main-color: rgb(130, 140, 255);
+  --grad-color: rgb(184, 191, 255);
+  --card-radius: 25px;
+  --header-height: 13%;
+  --image-height: 50%;
+  --text-height: calc(100% - var(--header-height) - var(--image-height));
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+p {
+  margin: 0;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  gap: 3rem;
+}
+
+.card {
+  height: 500px;
+  width: 280px;
+  border: 1px solid blue;
+  border-radius: var(--card-radius);
+  flex-direction: column;
+}
+
+/* Header */
+.card-header {
+  background: radial-gradient(var(--main-color), var(--grad-color));
+  height: var(--header-height);
+  border-radius: var(--card-radius) var(--card-radius) 0 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header-start {
+  display: flex;
+}
+
+.card-header-img {
+  height: 45px;
+  width: 45px;
+  border-radius: 50%;
+  background-color: white;
+  margin: 0 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card-header-img > img {
+  width: 50%;
+}
+
+.header-img-tooltip > p {
+  width: 100px;
+  background-color: white;
+  border: 1px solid rgb(165, 165, 165);
+  border-radius: 20px;
+  padding: 4px;
+  font-size: 12px;
+  text-align: center;
+  align-self: center;
+  position: relative;
+  bottom: 50px;
+  right: 10px;
+}
+
+.header-img-tooltip {
+  width: 50px;
+  position: relative;
+  top: 60px;
+  left: 10px;
+  opacity: 0;
+}
+
+.header-img-tooltip:hover {
+  opacity: 1;
+  transition: 0.5s;
+}
+
+.card-header-name {
+  font-size: 17px;
+}
+
+.card-header-date {
+  color: white;
+  font-size: 15px;
+}
+
+.card-header-more {
+  display: flex;
+  gap: 4px;
+  margin: 0 5px;
+  padding: 12px;
+  border-radius: 15px;
+}
+
+.card-header-more:hover {
+  background-color: rgb(100, 97, 252);
+  transition: 0.4s;
+}
+
+.more-dot {
+  height: 5px;
+  width: 5px;
+  border-radius: 50%;
+  background-color: black;
+}
+
+/* Image */
+.card-image {
+  height: var(--image-height);
+}
+
+.card-image > img {
+  height: 100%;
+  width: 100%;
+}
+
+/* Text */
+.card-text {
+  background: radial-gradient(var(--main-color), var(--grad-color));
+  border-radius: 0 0 var(--card-radius) var(--card-radius);
+  height: var(--text-height);
+}
+
+.card-like-comment {
+  display: flex;
+  gap: 10px;
+  padding: 15px 20px;
+}
+
+.card-like,
+.card-comment {
+  height: 20px;
+  width: 20px;
+  border-radius: 3px 5px 3px 5px;
+}
+
+.card-like:hover,
+.card-comment:hover {
+  background-color: rgb(100, 97, 252);
+  transition: 0.4s;
+}
+
+.card-description > span {
+  font-weight: bold;
+}
+
+.card-description {
+  font-size: 15px;
+  padding: 0 15px;
+}
+
+@media (max-width: 768px) {
+  main {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 375px) {
+  main {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+  }
+}

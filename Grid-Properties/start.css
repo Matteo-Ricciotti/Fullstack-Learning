@@ -1,0 +1,37 @@
+#green {
+  grid-area: header;
+}
+
+#yellow {
+  grid-area: main-yellow;
+}
+
+#red {
+  grid-area: main-red;
+}
+
+#blue {
+  grid-area: sidebar;
+}
+
+#orange {
+  grid-area: footer;
+}
+
+main {
+  display: grid;
+  grid-template-areas:
+    'header header header'
+    'main-yellow main-red sidebar'
+    'footer footer sidebar';
+}
+
+#yellow ul {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+#red ul {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
