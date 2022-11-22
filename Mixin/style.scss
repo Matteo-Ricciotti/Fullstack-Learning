@@ -1,0 +1,43 @@
+$red: red;
+$green: green;
+$blue: blue;
+$padding: 15px;
+
+@mixin article-mixin($color, $border-color, $font-size: 1rem) {
+    border: 1px solid $border-color;
+    color: $color;
+    font-size: $font-size;
+}
+
+div {
+    border: 1px solid $red;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    h1 {
+        color: $green;
+        text-decoration: underline $blue;
+    }
+    section:first-of-type {
+        display: flex;
+        padding: $padding;
+        article {
+            padding: $padding;
+        }
+        article:nth-child(odd) {
+            @include article-mixin(blue, green);
+        }
+        article:nth-child(even) {
+            @include article-mixin(red, green);
+        }
+    }
+    section:last-of-type {
+        width: calc(100% - $padding * 2);
+        padding: $padding;
+        article {
+            text-align: center;
+            padding: $padding;
+            @include article-mixin(green, blue, 24px)
+        }
+    }
+}
