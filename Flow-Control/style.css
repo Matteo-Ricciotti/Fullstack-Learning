@@ -1,0 +1,59 @@
+div {
+  border: 0.0625rem solid red;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+div > section:first-of-type {
+  display: flex;
+  padding: 0.9375rem;
+}
+div > section:first-of-type > article {
+  padding: 0.9375rem;
+}
+div > section:first-of-type > article:nth-child(odd) {
+  border: 0.0625rem solid green;
+  color: blue;
+  font-size: 1rem;
+}
+div > section:first-of-type > article:nth-child(even) {
+  border: 0.0625rem solid green;
+  color: red;
+  font-size: 1rem;
+}
+div > section:nth-of-type(2) {
+  width: calc(100% - 1.875rem);
+  display: flex;
+  justify-content: space-between;
+  padding: 0 0.9375rem;
+}
+div > section:nth-of-type(2) > div {
+  height: 2.8125rem;
+  width: 2.8125rem;
+}
+div > section:last-of-type {
+  width: calc(100% - 1.875rem);
+  padding: 0.9375rem;
+}
+div > section:last-of-type > article {
+  text-align: center;
+  padding: 0.9375rem;
+  border: 0.0625rem solid blue;
+  color: green;
+  font-size: 1.5rem;
+}
+
+.h1-class, .h2-class {
+  color: green;
+  text-decoration: underline blue;
+}
+
+.h2-class {
+  text-decoration: none;
+  border: 0.0625rem solid red;
+  padding: 1rem;
+}
+
+/* Non so proprio come farlo */
+
+/*# sourceMappingURL=style.css.map */
