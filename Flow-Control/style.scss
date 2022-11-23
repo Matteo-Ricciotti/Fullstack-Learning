@@ -1,5 +1,6 @@
 @use "variables.scss" as var;
 @use "calculations.scss" as calc;
+@use "sass:color";
 
 $padding: calc.px-to-rem(var.$padding);
 
@@ -41,6 +42,23 @@ div {
         &>div {
             height: calc.px-to-rem(45);
             width: calc.px-to-rem(45);
+
+            @for $index from 1 through 20 {
+                $color: black;
+                $color: color.adjust($color, $lightness: 5%*$index);
+
+                $background: color.invert($color);
+
+                @if $index ==10 {
+                    $color: var.$red;
+                    $background: var.$blue;
+                }
+
+                &:nth-child(#{$index}) {
+                    background-color: $background;
+                    color: $color;
+                }
+            }
         }
     }
 
@@ -68,4 +86,8 @@ div {
     padding: 1rem;
 }
 
-/* Non so proprio come farlo */
+@each $index in (1, 2, 3) {
+    .fs-#{$index}rem {
+        font-size: $index + rem;
+    }
+}
