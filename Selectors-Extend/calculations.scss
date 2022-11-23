@@ -1,3 +1,0 @@
-@function px-to-rem($num) {
-    @return calc(1rem * $num / 16);
-}
