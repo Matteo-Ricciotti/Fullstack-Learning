@@ -3,7 +3,7 @@ const printName = () => {
 
 	const inner = () => helloName;
 
-	return inner();
+	return inner;
 };
 
-console.log(printName());
+console.log(printName()());
